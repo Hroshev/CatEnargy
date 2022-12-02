@@ -1,0 +1,95 @@
+.header {
+    position: relative;
+    padding-top: 53px;
+    height: 696px;
+    @include tablet {
+        padding-top: 42px;
+        height: 860px;
+    }
+    @include tablet-min {
+        padding-top: 11px;
+        margin-bottom: 22px;
+        height: auto;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 49%;
+        background: url("@img/home-page/header__background-img.png") 0 0/cover no-repeat;
+        z-index: -1;
+        @include tablet {
+            display: none;
+        }
+        @include phone {
+            display: block;
+            top: 38%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            background: url("@img/home-page/header__background-mobile.png") 0 0/cover no-repeat;
+        }
+    }
+    &__inner{
+        position: relative;
+        margin: 111px 0px 0px 80px;
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            margin: 62px 0px 0px 87px;
+        }
+        @include tablet-min {
+            margin: 44px 0px 22px 0px;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    &__title{
+        @include phone {
+            color: #fff;
+        }
+    }
+    &__text{
+        margin: 40px 0px 52px 0px;
+        font-size: 20px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        @include tablet {
+            margin: 41px 0px 49px 0px;
+        }
+        @include tablet-min {
+            margin: 25px 0px 29px 0px;
+        }
+        @include phone {
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+    &__wrapper-img{
+        position: absolute;
+        top: -80px;
+        left: 31%;
+        z-index: -1;
+        @include tablet {
+            top: 75%;
+            left: 0;
+        }
+        @include tablet-min {
+            position: static;
+        }
+    }
+    &__img{
+        width: 100%;
+        max-width: 552px;
+        height: auto;
+    }
+    &__button{
+        width: 100%;
+        max-width: 244px;
+        @include tablet-min {
+            max-width: none;
+        }
+    }
+}
