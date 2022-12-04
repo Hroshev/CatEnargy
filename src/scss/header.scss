@@ -1,13 +1,12 @@
 .header {
     position: relative;
-    padding-top: 53px;
+    margin-bottom: 82px;
     height: 696px;
     @include tablet {
-        padding-top: 42px;
-        height: 860px;
+        margin-bottom: 0px;
+        height: 880px;
     }
     @include tablet-min {
-        padding-top: 11px;
         margin-bottom: 22px;
         height: auto;
     }
@@ -25,11 +24,9 @@
         }
         @include phone {
             display: block;
-            top: 38%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
-            background: url("@img/home-page/header__background-mobile.png") 0 0/cover no-repeat;
+            top: 69px;
+            left: 0;
+            background: url("@img/home-page/header__background-mobile.png") 0 0/contain no-repeat;
         }
     }
     &__inner{

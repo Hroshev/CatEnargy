@@ -7,17 +7,27 @@ $burger__mobile__background__menu__open: #fff;
 
 .burger {
     position: static;
+    padding: 53px 0px 0px 0px;
     width: 100%;
     top: 0;
     left: 0;
     background-color: $burger__pc__background-color;
     z-index: 20;
+    @include tablet {
+        padding: 42px 0px 0px 0px;
+    }
+    @include tablet-min {
+        padding: 11px 0px 17px 0px;
+    }
+    @include phone {
+        border-bottom: 1px solid #D9D9D9;
+    }
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
-        min-height: 30px;
+        min-height: 40px;
     }
     &__logo {
         z-index: 5;
@@ -124,15 +134,12 @@ $burger__mobile__background__menu__open: #fff;
             transition: left 0.3s ease 0s;
             &::before {
                 content: "";
-                position: fixed;
+                position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 70px;
                 background-color: $burger__mobile__background-color;
-                @include phone {
-                    border-bottom: 1px solid #D9D9D9;
-                }
             }
             &._active {
                 left: 0;

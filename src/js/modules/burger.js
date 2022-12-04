@@ -78,9 +78,10 @@ if (menuLinks.length > 0){
   }
 }
 
-window.addEventListener('resize', () => {
-  const burgerImage = document.querySelector('.burger__logo-img');
-  const windowInnerWidth = window.innerWidth;
+const burgerImage = document.querySelector('.burger__logo-img');
+
+function modifyLogo(){
+  const windowInnerWidth = window.outerWidth;
   if (windowInnerWidth > 992) {
     burgerImage.setAttribute('src', './img/logo-desktop.svg');
   }
@@ -90,4 +91,7 @@ window.addEventListener('resize', () => {
   if (windowInnerWidth <= 768) {
     burgerImage.setAttribute('src', './img/logo-mobile.svg');
   }
-});
+}
+
+window.addEventListener("DOMContentLoaded", modifyLogo);
+window.addEventListener("resize", modifyLogo);
