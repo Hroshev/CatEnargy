@@ -1,4 +1,5 @@
 import "./modules/burger.js";
+import "./modules/map.js";
 
 // import "./modules/regularExpressions.js";
 // import "./modules/popup.js";
