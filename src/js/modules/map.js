@@ -1,15 +1,26 @@
+(function (){
+
+function Position() {
+    if(window.outerWidth > 992){
+        this.lat = 59.939065;
+        this.lng = 30.319335;
+    }else {
+        this.lat = 59.938882;
+        this.lng = 30.32323;
+    }
+  }
+  const coordinate = new Position;
+
+/* Initializing the card */
 function initMap() {
-    const centerPosition = { lat: 59.938882, lng: 30.32323 };
-    const positionLeft = { lat: 59.939065, lng: 30.319335 };
     const options = {
-        center: positionLeft,
+        center: coordinate,
         zoom: 17,
     }
 
     const myMap = new google.maps.Map(document.getElementById("map"), options);
-
     const marker = new google.maps.Marker({
-        position: centerPosition,
+        position: { lat: 59.938882, lng: 30.32323 },
         map: myMap,
         title: "Cat Energy",
         icon: "./img/footer__map-icon.png"
@@ -18,7 +29,8 @@ function initMap() {
 
 window.initMap = initMap;
 
+// window.addEventListener("resize", function(){
+//     window.initMap = initMap;
+// });
 
-
-
-// AIzaSyBIFOmvzCHvFU1JE_PmVSSHsyBLEigRMqA
+})();
