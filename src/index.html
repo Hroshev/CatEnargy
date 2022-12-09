@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/head.html',{
-	"title":"Cat Energy"
+	"title": "Магазин спортивного питания для котов 'Cat Energy'"
 	})
 	<body class="popup__wrapper">
 		@@include('html/header.html',{})
@@ -57,10 +57,34 @@
 						<div class="example__content">
 							<h2 class="title example__title">Живой пример</h2>
 							<p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-							<div class="example__content-inner"></div>
-
+							<div class="example__content-inner">
+								<div class="example__result-inner">
+									<h4 class="example__result-item">5 КГ <span class="example__result-text">снижение веса</span></h4>
+									<h4 class="example__result-item">60 ДНЕЙ <span class="example__result-text">затрачено времени</span></h4>
+								</div>
+								<div class="example__costs-inner">
+									<h4 class="example__costs-item">Затраты на питание: </h4>
+									<h4 class="example__costs-item">15 000 РУБ.</h4>
+								</div>
+							</div>
 						</div>
-						<div class="example__slider"></div>
+						<div class="example__slider">
+							<div class="example__slider-content">
+								<div class="example__slider--before">
+									<img class="example__slider-image" src="@img/home-page/example__cat1.png" alt="Fat Cat">
+								</div>
+								<div class="example__slider--after">
+									<img class="example__slider-image" src="@img/home-page/example__cat2.png" alt="Slim Cat">
+								</div>
+							</div>
+							<div class="example__slider-change">
+								<label for="before" class="example__slider-btn example__slider-btn--before">Было</label>
+								<div class="example__slider-scale">
+								  <div class="example__slider-grip"></div>
+								</div>
+								<label for="after" class="example__slider-btn example__slider-btn--after">Стало</label>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
