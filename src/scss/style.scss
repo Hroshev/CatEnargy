@@ -286,7 +286,7 @@
     background: linear-gradient(#fff 0, #fff 200px, #f2f2f2 200px, #f2f2f2 100%);
     @include tablet {
         padding: 43px 0px 64px 0px;
-        background: #fff;
+        background: linear-gradient(#fff 0, #fff 600px, #f2f2f2 600px, #f2f2f2 100%);
     }
     @include phone {
         padding: 27px 0px 25px 0px;
@@ -418,37 +418,51 @@
         }
     }
     &__slider {
-        width: 100%;
-        max-width: 637px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
         @include tablet {
-            max-width: none;
+            width: 100%;
         }
     }
     &__slider-content {
         position: relative;
-        overflow: hidden;
+        width: 640px;
+        height: 536px;
+        @include tablet-min {
+            width: 540px;
+            height: 430px;
+        }
+        @include phone {
+            width: 311px;
+            height: 232px;
+        }
     }
-    &__slider--before {}
+    &__slider--before {
+        position: absolute;
+        width: 330px;
+        height: 100%;
+        bottom: 0;
+        left: 5px;
+        background: url("@img/home-page/example__cat1.png") 10% 50%/cover no-repeat;
+        @include tablet-min {
+            width: 280px;
+        }
+    }
     &__slider--after {
         position: absolute;
-        right: 0;
-        top: 0;
-        width: 50%;
+        width: 300px;
         height: 100%;
-        background-image: linear-gradient(#fff 0,#fff 100px,#eaeaea 100px,#eaeaea 100%);
-        box-shadow: 400px 570px 0 400px #eaeaea;
-        overflow: hidden;
-        z-index: 2;
-    }
-    &__slider-image {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        bottom: 0;
+        right: 5px;
+        background: url("@img/home-page/example__cat2.png") 90% 50%/cover no-repeat;
+        @include tablet-min {
+            width: 250px;
+        }
+        @include phone {
+            width: 0%;
+        }
     }
     &__slider-change {
         margin-top: 19px;
@@ -476,9 +490,6 @@
         &:hover {
             border-bottom: 1px solid #000000;
         }
-        &:active {
-            border: none;
-        }
     }
     &__slider-scale {
         position: relative;
@@ -493,13 +504,14 @@
             width: 84px;
             height: 14px;
             background: #fff;
-            border-radius: 1px solid #CDCDCD;
+            border: 1px solid #CDCDCD;
         }
     }
     &__slider-grip {
         position: absolute;
-        top: -15px;
+        top: 50%;
         left: 50%;
+        transform: translateY(-50%);
         width: 34px;
         height: 34px;
         cursor: pointer;
@@ -509,9 +521,7 @@
         box-shadow: (0px 1px 3px rgba(0, 0, 0, 0.16));
         transition: box-shadow .2s ease-in;
         @include phone {
-            top: 4px;
-            left: 4px;
-            width: 35px;
+            left: 3%;
             height: 6px;
             background: #68B738;
             border: none;
