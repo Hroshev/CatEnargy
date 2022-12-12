@@ -1,20 +1,7 @@
-(function (){
-
-function Position() {
-    if(window.outerWidth > 992){
-        this.lat = 59.939065;
-        this.lng = 30.319335;
-    }else {
-        this.lat = 59.938882;
-        this.lng = 30.32323;
-    }
-  }
-  const coordinate = new Position;
-
-/* Initializing the card */
 function initMap() {
+    const windowInnerWidth = window.outerWidth;
     const options = {
-        center: coordinate,
+        center: windowInnerWidth <= 995 ? { lat: 59.938882, lng: 30.32323 } : { lat: 59.939065, lng: 30.319335 },
         zoom: 17,
     }
 
@@ -26,11 +13,8 @@ function initMap() {
         icon: "./img/footer__map-icon.png"
     })
 }
-
 window.initMap = initMap;
 
-// window.addEventListener("resize", function(){
-//     window.initMap = initMap;
-// });
-
-})();
+window.addEventListener("resize", () => {
+    initMap()
+});

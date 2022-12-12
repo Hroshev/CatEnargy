@@ -78,6 +78,7 @@ if (menuLinks.length > 0){
   }
 }
 
+/* Change logo */
 const burgerImage = document.querySelector('.burger__logo-img');
 
 function modifyLogo(){
@@ -95,3 +96,33 @@ function modifyLogo(){
 
 window.addEventListener("DOMContentLoaded", modifyLogo);
 window.addEventListener("resize", modifyLogo);
+
+
+/* Switching partitions */
+const container = document.querySelector('.menu__list');
+
+container.addEventListener('click', function(e) {
+const items = document.querySelectorAll('.menu__link')
+const target = e.target
+  
+  Array.from(items).forEach(item => {
+  item.classList.remove('menu__link--active')
+})
+target.classList.add('menu__link--active')
+// target.classList.add('benefits__sidebar--active')
+// if(target.classList.contains('sale')){
+//   saleContent.style.display = "block";
+//   installationContent.style.display = "none";
+//   restrictionsContent.style.display = "none";
+// }
+// else if(target.classList.contains('installation')){
+//   installationContent.style.display = "block";
+//   saleContent.style.display = "none";
+//   restrictionsContent.style.display = "none";
+// }
+// else if(target.classList.contains('restrictions')){
+//   restrictionsContent.style.display = "block";
+//   saleContent.style.display = "none";
+//   installationContent.style.display = "none";
+// }
+})
