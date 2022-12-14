@@ -283,7 +283,7 @@
 }
 .example {
     padding: 58px 0px 75px 0px;
-    background: linear-gradient(#fff 0, #fff 200px, #f2f2f2 200px, #f2f2f2 100%);
+    background: linear-gradient(#fff 0, #fff 240px, #f2f2f2 240px, #f2f2f2 100%);
     @include tablet {
         padding: 43px 0px 64px 0px;
         background: linear-gradient(#fff 0, #fff 600px, #f2f2f2 600px, #f2f2f2 100%);
@@ -439,33 +439,32 @@
             height: 232px;
         }
     }
+    
     &__slider--before {
         position: absolute;
-        width: 330px;
+        width: 100%;
         height: 100%;
         bottom: 0;
-        left: 5px;
-        background: url("@img/home-page/example__cat1.png") 10% 50%/cover no-repeat;
-        @include tablet-min {
-            width: 280px;
-        }
+        left: 0;
+        background: url("@img/home-page/example__cat1.png") 55% 50%/cover no-repeat;
+        z-index: 1;
     }
     &__slider--after {
         position: absolute;
-        width: 300px;
+        width: 50%;
         height: 100%;
         bottom: 0;
-        right: 5px;
-        background: url("@img/home-page/example__cat2.png") 90% 50%/cover no-repeat;
-        @include tablet-min {
-            width: 250px;
-        }
+        right: 0;
+        background: url("@img/home-page/example__cat2.png") 93% 50%/cover no-repeat, linear-gradient(#fff 0,#fff 182px,#eaeaea 182px,#eaeaea 100%);
+        box-shadow: 0px 128px 0px 0px rgba(234, 234, 234, 1);
+        z-index: 2;
         @include phone {
             width: 0%;
         }
     }
     &__slider-change {
         margin-top: 19px;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -481,6 +480,7 @@
         text-transform: uppercase;
         border-bottom: 1px dotted rgba(0,0,0,.3);
         transition: border .2s ease-in;
+        z-index: 4;
         @include phone {
             padding: 0px;
             margin: 0px 10px;
@@ -493,13 +493,12 @@
     }
     &__slider-scale {
         position: relative;
-        width: 428px;
+        width: 100%;
+        max-width: 420px;
         height: 6px;
         background: #DCDCDC;
         border-radius: 6px;
-        @include tablet-min {
-            width: 380px;
-        }
+        z-index: 4;
         @include phone {
             width: 84px;
             height: 14px;
@@ -511,7 +510,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         width: 34px;
         height: 34px;
         cursor: pointer;
@@ -521,7 +520,7 @@
         box-shadow: (0px 1px 3px rgba(0, 0, 0, 0.16));
         transition: box-shadow .2s ease-in;
         @include phone {
-            margin: 0 3px;
+            margin: 0 20px;
             left: 0;
             height: 6px;
             background: #68B738;

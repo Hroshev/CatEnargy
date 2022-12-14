@@ -16,5 +16,5 @@ function initMap() {
 window.initMap = initMap;
 
 window.addEventListener("resize", () => {
-    initMap()
+    setTimeout(initMap, 2000);
 });
