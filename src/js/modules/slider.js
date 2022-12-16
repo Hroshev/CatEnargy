@@ -1,21 +1,22 @@
-const slider = document.querySelector(".example__slider-content");
-const scale = document.querySelector(".example__slider-scale");
-const imageBefore = document.querySelector(".example__slider--before");
-const imageAfter = document.querySelector(".example__slider--after");
-const grip = document.querySelector('.example__slider-grip');
-const buttonBefore = document.querySelector('.example__slider-btn--before');
-const buttonAfter = document.querySelector('.example__slider-btn--after');
+const slider = document.querySelector(".slider");
+const sliderContent = document.querySelector(".slider__content");
+const scale = document.querySelector(".slider__scale");
+const imageBefore = document.querySelector(".slider__image--before");
+const imageAfter = document.querySelector(".slider__image--after");
+const grip = document.querySelector('.slider__grip');
+const buttonBefore = document.querySelector('.slider__btn--before');
+const buttonAfter = document.querySelector('.slider__btn--after');
+
 
 let isActive = false;
 
 const beforeAfterSlider = (x) => {
-    let shift = Math.max(0, Math.min(x, slider.offsetWidth));
-    let scaleWidth = Math.max(0, Math.min(x, scale.offsetWidth));
-    imageAfter.style.width = `calc(${scaleWidth}px + 220px)`;
-    grip.style.left = `${scaleWidth}px`;
-}
+    let gripShift = Math.max(0, Math.min(x, scale.offsetWidth));
+    let imageShift = Math.floor(Math.max(0, Math.min(x, ((gripShift * 100) / sliderContent.offsetWidth) + 35)));
 
-// imageAfter.style.width = `calc(${shift}px + 220px)`;
+    imageAfter.style.width = `${imageShift}%`;
+    grip.style.left = `${gripShift}px`;
+}
 
 const pauseEvents = (e) => {
     e.stopPropagation();
@@ -45,8 +46,6 @@ document.body.addEventListener('mousemove', (e) => {
     pauseEvents(e);
 })
 
-
-
 window.addEventListener("resize", () => {
     const windowInnerWidth = window.outerWidth;
     if(windowInnerWidth <= 576) {
@@ -66,6 +65,7 @@ function clickButtonLeft(){
     imageBefore.style.width = "100%"
     imageAfter.style.width = '0'
     grip.style.left = "0"
+    grip.style.transition = "left .2s linear"
 }
 
 function clickButtonRight(){
@@ -73,4 +73,5 @@ function clickButtonRight(){
     imageAfter.style.width = '100%'
     imageBefore.style.width = "0"
     windowInnerWidth <= 576 ? grip.style.left = "50%" : grip.style.left = "100%"
+    grip.style.transition = "left .2s linear"
 }
