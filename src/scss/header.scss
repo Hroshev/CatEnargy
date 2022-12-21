@@ -29,6 +29,18 @@
             background: url("@img/home-page/header__background-mobile.png") 0 0/contain no-repeat;
         }
     }
+    & .burger__menu .menu__link{
+        color: #fff;
+        @include tablet {
+            color: $first-color;
+        }
+    }
+    & .burger__menu .menu__link--active::after{
+        background-color: #fff;
+        @include tablet {
+            background-color: #68B738;
+        }
+    }
     &__inner{
         position: relative;
         margin: 111px 0px 0px 80px;

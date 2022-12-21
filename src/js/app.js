@@ -1,12 +1,3 @@
-import "./modules/burger.js";
-import "./modules/slider.js"
-import "./modules/map.js";
-
-// import "./modules/regularExpressions.js";
-// import "./modules/popup.js";
-// import "./modules/burger.js";
-// import "./modules/swiper.js";
-// import "./modules/ScrollTo.js";
-// import "./modules/geolocation.js";
-// import "./modules/accordion.js";
-// import "./modules/date.js";
+import * as burger from "./modules/burger.js"
+import * as slider from "./modules/slider.js"
+import * as map from "./modules/map.js"

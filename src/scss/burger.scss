@@ -175,15 +175,11 @@ $burger__mobile__background__menu__open: #fff;
         position: relative;
         font-size: 20px;
         font-family: 'Oswald', sans-serif;
-        color: $burger__menu__link__color;
+        color: $first-color;
         text-transform: uppercase;
         transition: opacity 0.2s ease-in;
         &:hover {
             opacity: 0.6;
-        }
-        &:active {
-            color: $burger__menu__link__color;
-            opacity: 1;
         }
         @include tablet {
             font-size: 18px;
@@ -203,10 +199,9 @@ $burger__mobile__background__menu__open: #fff;
             height: 2px;
             top: 100%;
             left: 0;
-            background-color: #fff;
+            background-color: #68B738;
             @include tablet {
                 margin-top: 10px;
-                background-color: #68B738;
             }
         }
     }

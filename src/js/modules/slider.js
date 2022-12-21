@@ -7,7 +7,6 @@ const grip = document.querySelector('.slider__grip');
 const buttonBefore = document.querySelector('.slider__btn--before');
 const buttonAfter = document.querySelector('.slider__btn--after');
 
-
 let isActive = false;
 
 const beforeAfterSlider = (x) => {
@@ -46,20 +45,22 @@ document.body.addEventListener('mousemove', (e) => {
     pauseEvents(e);
 })
 
-window.addEventListener("resize", () => {
-    const windowInnerWidth = window.outerWidth;
-    if(windowInnerWidth <= 576) {
+if(slider){
+    window.addEventListener("resize", () => {
+        const windowInnerWidth = window.outerWidth;
+        if(windowInnerWidth <= 576) {
+            clickButtonLeft()
+        }
+    });
+    
+    buttonBefore.addEventListener('click', () =>{
         clickButtonLeft()
-    }
-});
-
-buttonBefore.addEventListener('click', () =>{
-    clickButtonLeft()
-})
-
-buttonAfter.addEventListener('click', () =>{
-    clickButtonRight()
-})
+    })
+    
+    buttonAfter.addEventListener('click', () =>{
+        clickButtonRight()
+    })   
+}
 
 function clickButtonLeft(){
     imageBefore.style.width = "100%"
