@@ -98,11 +98,15 @@ window.addEventListener("DOMContentLoaded", modifyLogo);
 window.addEventListener("resize", modifyLogo);
 
 /* Active Pages */
-const activePage = window.location.pathname;
-const navLinks = document.querySelectorAll('.menu__link');
+window.addEventListener("DOMContentLoaded", activePage);
 
-navLinks.forEach(link => {
-  if(link.href.includes(`${activePage}`)){
-    link.classList.add('menu__link--active')
-  }
-})
+function activePage() {
+  const activePage = window.location.pathname;
+  const navLinks = document.querySelectorAll(".menu__link");
+
+  navLinks.forEach((link) => {
+    if (link.href.includes(`${activePage}`)) {
+      link.classList.add("menu__link--active");
+    }
+  });
+}

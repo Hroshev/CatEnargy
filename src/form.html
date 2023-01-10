@@ -6,7 +6,56 @@
 	<body class="popup__wrapper">
 		@@include('html/burger.html',{})
 		<main>
-			<h1>Form</h1>
+			<section class="form">
+				<form class="form__catEnergy" id="form__catEnergy" action="http://echo.htmlacademy.ru" method="post">
+					<div class="form__container">
+						<h1 class="title">Подбор программы</h1>
+						<h2 class="form__sub-title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+						<div class="form__wrapper">
+							<div class="form__inner">
+								<div class="form__item">
+									<label class="form__catEnergy-label required-field" for="catName">ИМЯ:*</label>
+									<input type="text" id="catName" name="catName" value="" placeholder="Барсик" maxlength="18" required>
+								</div>
+								<div class="form__item">
+									<label class="form__catEnergy-label required-field" for="catWeight">Вес (кг):*</label>
+									<input type="text" id="catWeight" name="catWeight" value="" placeholder="7" maxlength="4" required>
+								</div>
+								<div class="form__item">
+									<label class="form__catEnergy-label" for="catAge">Возраст (лет):</label>
+									<input type="text" id="catAge" name="catAge" value="" placeholder="7" maxlength="2">
+								</div>
+							</div>
+							<div class="form__inner">
+								<div class="form__item-radio">
+									<div class="form__item-group">
+										<label>
+											<input class="form__real-radio" type="radio" name="category" value="losing-weight">
+											<span class="form__custom-radio"></span>
+											похудение
+										</label>
+									</div>
+									<div class="form__item-group">
+										<label>
+											<input class="form__real-radio" type="radio" name="category" value="gain-weight">
+											<span class="form__custom-radio"></span>
+											Набор массы
+										</label>
+									</div>
+									<div class="form__item-group">
+										<label>
+											<input class="form__real-radio" type="radio" name="category" value="help">
+											<span class="form__custom-radio"></span>
+											Не знаю (Нужен ваш совет)
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</form>
+			</section>
 		</main>
 		@@include('html/footer.html',{})
 		<script src="js/app.min.js"></script>

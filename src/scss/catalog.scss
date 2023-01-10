@@ -33,6 +33,7 @@
     &__item{
         padding: 0px 36px 40px 36px;
         width: 100%;
+        height: 100%;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -54,7 +55,7 @@
         align-items: center;
         @include phone {
             width: 100%;
-            justify-content: center;
+            justify-content: space-evenly;
             flex-direction: row;
         }
     }
@@ -65,12 +66,12 @@
         }
         @include phone {
             margin: 0;
-            padding: 14px 36px 12px 36px;
+            width: 24%;
         }
     }
     &__item-picture{
         width: 100%;
-        max-width: 172px;
+        max-width: 161px;
         height: auto;
         @include phone {
             max-width: 120px;
@@ -83,7 +84,9 @@
         }
     }
     &__description-title{
-        margin-bottom: 21px;
+        margin: 0px 0px 21px 0px;
+        width: 100%;
+        max-width: 158px;
         font-size: 20px;
         font-weight: 400;
         line-height: 1;
@@ -92,7 +95,8 @@
         text-transform: uppercase;
         color: #222222;
         @include phone {
-            margin-bottom: 18px;
+            margin: 0px 0px 18px 0px;
+            max-width: 125px;
             font-size: 16px;
             line-height: 1.2;
             text-align: left;
@@ -226,17 +230,24 @@
         left: 0;
         border: 2px solid #68B738;
         z-index: -1;
+        @include phone {
+            top: 20px;
+        }
     }
     &__title{
-        margin-bottom: 80px;
+        margin: 0px 0px 80px -40px;
         display: inline-block;
         font-size: 36px;
         padding: 0px 35px 0px 40px;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
         background: #fff;
+        @include desktop-min {
+            margin: 0px 0px 80px 0px;
+        }
         @include phone {
-            margin-bottom: 35px;
+            margin: 0px 0px 35px -20px;
+            padding: 0px 22px 0px 20px;
             font-size: 24px;
         }
     }
@@ -247,40 +258,55 @@
         gap: 20px;
         @include desktop-min {
             flex-direction: column;
-            gap: 69px;
+            row-gap: 69px;
+        }
+        @include phone {
+            row-gap: 39px;
         }
     }
-    &__item-wrapper{
+    &__list{
         width: 100%;
         max-width: 896px;
+        @include desktop-min {
+            max-width: 708px;
+        }
     }
     &__item{
         padding: 15px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 26px;
+        column-gap: 10px;
         border-top: 1px solid #CDCDCD;
         &:last-child{
             border-bottom: 1px solid #CDCDCD;
         }
-    }
-    &__inner{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
+        @include desktop-min {
+            padding: 26px 37px 28px 37px;
+            flex-wrap: wrap;
+            border-left: 1px solid #CDCDCD;
+            border-right: 1px solid #CDCDCD;
+        }
+        @include phone {
+            padding: 13px 0px 19px 0px;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 0px;
+            border-left: none;
+            border-right: none;
+        }
     }
     &__item-title{
+        width: 32%;
         font-size: 20px;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
         text-transform: uppercase;
         color: #222222;
-    }
-    &__item-description{
-        width: 100%;
-        max-width: 570px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
+        @include phone {
+            font-size: 16px;
+        }
     }
     &__item-content{
         width: 100%;
@@ -289,12 +315,19 @@
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+        @include phone {
+            margin: 13px 0px 15px 0px;
+            max-width: none;
+        }
     }
     &__item-product{
         font-size: 16px;
         font-family: 'Arial', sans-serif; 
         font-weight: 400;
         color: $second-color;
+        @include phone {
+            font-size: 14px;
+        }
     }
     &__item-price{
         font-size: 16px;
@@ -302,6 +335,9 @@
         font-weight: 400;
         text-transform: uppercase;
         color: $second-color;
+        @include phone {
+            font-size: 14px;
+        }
     }
     &__item-button{
         display: inline-block;
@@ -322,6 +358,9 @@
         &:active {
           opacity: 0.3;
         }
+        @include desktop-min {
+            max-width: none;
+        }
     }
     &__image{
         padding: 56px 43px 43px 43px;
@@ -333,7 +372,18 @@
         flex-direction: column;
         background: url("@img/catalog/green-cat.png") 50% 50%/cover no-repeat;
         @include desktop-min {
+            padding: 57px 120px 60px 78px;
+            width: 100%;
+            max-width: 708px;
+            justify-content: space-between;
+            flex-direction: row;
             background: url("@img/catalog/green-catTablet.png") 0 0/cover no-repeat;
+        }
+        @include phone {
+            padding: 58px 0px 43px 0px;
+            flex-direction: column;
+            gap: 48px;
+            background: url("@img/catalog/green-cat.png") 50% 50%/cover no-repeat;
         }
     }
     &__image-icon{
@@ -345,5 +395,14 @@
         margin-top: 25px;
         color: #fff;
         text-align: center;
+        @include desktop-min {
+            margin-top: 0px;
+            width: 100%;
+            max-width: 160px;
+            text-align: left;
+        }
+        @include phone {
+            text-align: center;
+        }
     }
 }
