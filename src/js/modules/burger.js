@@ -102,7 +102,12 @@ window.addEventListener("DOMContentLoaded", activePage);
 
 function activePage() {
   const activePage = location.href;
+  const homePage = document.querySelector('.home-page');
   const navLinks = document.querySelectorAll(".menu__link");
+
+  if (window.location.pathname === '/') {
+    homePage.classList.add("menu__link--active");
+  }
 
   navLinks.forEach((link) => {
     if (link.href === (`${activePage}`)) {
