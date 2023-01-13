@@ -101,11 +101,11 @@ window.addEventListener("resize", modifyLogo);
 window.addEventListener("DOMContentLoaded", activePage);
 
 function activePage() {
-  const activePage = window.location.pathname;
+  const activePage = location.href;
   const navLinks = document.querySelectorAll(".menu__link");
 
   navLinks.forEach((link) => {
-    if (link.href.includes(`${activePage}`)) {
+    if (link.href === (`${activePage}`)) {
       link.classList.add("menu__link--active");
     }
   });
