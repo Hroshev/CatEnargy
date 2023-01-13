@@ -387,9 +387,12 @@
         }
     }
     &__image-icon{
-        width: 100%;
-        max-width: 80px;
-        height: auto;
+        width: 80px;
+        height: 83px;
+        @include phone {
+            width: 78px;
+            height: 80px;
+        }
     }
     &__image-text{
         margin-top: 25px;

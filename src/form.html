@@ -7,7 +7,7 @@
 		@@include('html/burger.html',{})
 		<main>
 			<section class="form">
-				<form class="form__catEnergy" id="form__catEnergy" action="http://echo.htmlacademy.ru" method="post">
+				<form class="form__catEnergy" id="form__catEnergy" action="#">
 					<div class="form__container">
 						<h1 class="title">Подбор программы</h1>
 						<h2 class="form__sub-title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
@@ -19,11 +19,11 @@
 								</div>
 								<div class="form__item">
 									<label class="form__catEnergy-label required-field" for="catWeight">Вес (кг):*</label>
-									<input type="text" id="catWeight" name="catWeight" value="" placeholder="7" maxlength="4" required>
+									<input class="onlyNumber" type="text" id="catWeight" name="catWeight" value="" placeholder="7" maxlength="4" required>
 								</div>
 								<div class="form__item">
 									<label class="form__catEnergy-label" for="catAge">Возраст (лет):</label>
-									<input type="text" id="catAge" name="catAge" value="" placeholder="7" maxlength="2">
+									<input class="onlyNumber" type="text" id="catAge" name="catAge" value="" placeholder="7" maxlength="2">
 								</div>
 							</div>
 							<div class="form__inner">
@@ -68,7 +68,7 @@
 								<div class="form__item">
 									<label class="form__catEnergy-label required-field" for="userPhone">Телефон:*</label>
 									<div class="form__contact-phone">
-										<input type="phone" id="userPhone" name="userPhone" value="" placeholder="8 (960) 900-60-90" maxlength="15" required>
+										<input class="onlyNumber" type="phone" id="userPhone" name="userPhone" value="" placeholder="8 (960) 900-60-90" maxlength="15" required>
 									</div>
 								</div>
 							</div>
