@@ -96,22 +96,3 @@ function modifyLogo(){
 
 window.addEventListener("DOMContentLoaded", modifyLogo);
 window.addEventListener("resize", modifyLogo);
-
-/* Active Pages */
-window.addEventListener("DOMContentLoaded", activePage);
-
-function activePage() {
-  const activePage = location.href;
-  const homePage = document.querySelector('.home-page');
-  const navLinks = document.querySelectorAll(".menu__link");
-
-  if (window.location.pathname === '/') {
-    homePage.classList.add("menu__link--active");
-  }
-
-  navLinks.forEach((link) => {
-    if (link.href === (`${activePage}`)) {
-      link.classList.add("menu__link--active");
-    }
-  });
-}
