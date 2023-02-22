@@ -1194,19 +1194,28 @@ body {
 }
 
 .extra-goods__line {
+  position: relative;
+  padding-left: calc((100% - 1250px) / 2 + 15px);
+  overflow: hidden !important;
+  margin-bottom: 81px;
+}
+
+.extra-goods__line::before {
   position: absolute;
-  width: 100%;
-  top: 30px;
+  content: "";
+  top: 55%;
   left: 0;
-  border: 2px solid #68B738;
+  width: 100%;
+  height: 2px;
+  background-color: #68B738;
   z-index: -1;
 }
 
 .extra-goods__title {
-  margin: 0px 0px 80px -40px;
   display: inline-block;
-  font-size: 36px;
   padding: 0px 35px 0px 40px;
+  margin-left: -40px;
+  font-size: 36px;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   background: #fff;
@@ -1518,17 +1527,18 @@ body {
 
 .form__line-title {
   position: relative;
+  padding-left: calc((100% - 1250px) / 2 + 15px);
+  overflow: hidden !important;
 }
 
 .form__line-title::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: -20%;
-  width: 140%;
+  left: 0;
+  width: 100%;
   height: 2px;
   background-color: #68b738;
-  overflow: hidden !important;
   z-index: -1;
 }
 
@@ -1907,9 +1917,21 @@ body {
   opacity: 0.7;
 }
 
+@media (max-width: 1440px) {
+  .extra-goods__title {
+    margin-left: -15px;
+  }
+
+  .form__title {
+    margin-left: 0px;
+    padding: 0px 40px 0px 15px;
+  }
+}
+
 @media (max-width: 1200px) {
   .extra-goods__title {
-    margin: 0px 0px 80px 0px;
+    margin-left: 0;
+    padding: 0px 35px 0px 15px;
   }
 
   .extra-goods__wrapper {
@@ -2192,10 +2214,6 @@ body {
     margin-left: 38px;
     width: 90%;
     max-width: none;
-  }
-
-  .form__title {
-    margin-left: 0px;
   }
 
   .form__user-wrapper {
@@ -2716,12 +2734,11 @@ body {
   }
 
   .extra-goods__line {
-    top: 20px;
+    margin-bottom: 35px;
   }
 
   .extra-goods__title {
-    margin: 0px 0px 35px -20px;
-    padding: 0px 22px 0px 20px;
+    padding: 0px 22px 0px 15px;
     font-size: 24px;
   }
 
@@ -2842,10 +2859,11 @@ body {
 
   .form__title {
     padding: 0px 15px;
-    margin-left: -15px;
-    width: 100%;
-    max-width: 230px;
     font-size: 24px;
+  }
+
+  .form__title--short {
+    max-width: 230px;
   }
 
   .form__user-wrapper {
