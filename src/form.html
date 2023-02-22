@@ -73,72 +73,84 @@
 								</div>
 							</div>
 						</div>
-						<div class="form__line-title form__user-title">
-							<h2 class="form__title">Контактные данные (владельца кота)</h2>
+					</div>
+
+						<div class="form__line-title form__user-title ">
+							<h2 class="form__title form__title--short">Контактные данные (владельца кота)</h2>
 						</div>
-						<div class="form__user-wrapper">
-							<div class="form__inner">
-								<div class="form__item">
-									<label class="form__catEnergy-label required-field" for="userEmail">E-mail:*</label>
-									<div class="form__contact-email">
-										<input type="email" id="userEmail" name="userEmail" value="" placeholder="кuklachev@gmail.com" maxlength="30" required>
+
+						<div class="form__container">
+							<div class="form__user-wrapper">
+								<div class="form__inner">
+									<div class="form__item">
+										<label class="form__catEnergy-label required-field" for="userEmail">E-mail:*</label>
+										<div class="form__contact-email">
+											<input type="email" id="userEmail" name="userEmail" value="" placeholder="кuklachev@gmail.com" maxlength="30" required>
+										</div>
+									</div>
+								</div>
+								<div class="form__inner">
+									<div class="form__item">
+										<label class="form__catEnergy-label required-field" for="userPhone">Телефон:*</label>
+										<div class="form__contact-phone">
+											<input class="onlyNumber" type="phone" id="userPhone" name="userPhone" value="" placeholder="8 (960) 900-60-90" maxlength="15" required>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="form__inner">
-								<div class="form__item">
-									<label class="form__catEnergy-label required-field" for="userPhone">Телефон:*</label>
-									<div class="form__contact-phone">
-										<input class="onlyNumber" type="phone" id="userPhone" name="userPhone" value="" placeholder="8 (960) 900-60-90" maxlength="15" required>
-									</div>
-								</div>
-							</div>
 						</div>
+
 						<div class="form__line-title form__comments-title">
 							<h2 class="form__title">Комментарий</h2>
 						</div>
-						<div class="form__comments">
-							<label for="comments"></label>
-							<textarea id="comments" name="comments" cols="28" rows="5" maxlength="650" placeholder="Расскажите обо всех повадках кота"></textarea>
+
+						<div class="form__container">
+							<div class="form__comments">
+								<label for="comments"></label>
+								<textarea id="comments" name="comments" cols="28" rows="5" maxlength="650" placeholder="Расскажите обо всех повадках кота"></textarea>
+							</div>
 						</div>
+
 						<div class="form__line-title form__additionally-title">
 							<h2 class="form__title">Дополнительно</h2>
 						</div>
-						<div class="form__additionally-list">
-							<div class="form__additionally-item">
-								<label>
-									<input class="form__real-checkbox" type="checkbox" name="sugar-substitute" checked>
-									<span class="form__custome-checkbox"></span>
-									сахарозаменитель
-								</label>
+
+						<div class="form__container">
+							<div class="form__additionally-list">
+								<div class="form__additionally-item">
+									<label>
+										<input class="form__real-checkbox" type="checkbox" name="sugar-substitute" checked>
+										<span class="form__custome-checkbox"></span>
+										сахарозаменитель
+									</label>
+								</div>
+								<div class="form__additionally-item">
+									<label>
+										<input class="form__real-checkbox" type="checkbox" name="water">
+										<span class="form__custome-checkbox"></span>
+										питьевая вода
+									</label>
+								</div>
+								<div class="form__additionally-item">
+									<label>
+										<input class="form__real-checkbox" type="checkbox" name="milk">
+										<span class="form__custome-checkbox"></span>
+										молоко
+									</label>
+								</div>
+								<div class="form__additionally-item">
+									<label>
+										<input class="form__real-checkbox" type="checkbox" name="vitamins">
+										<span class="form__custome-checkbox"></span>
+										витамины
+									</label>
+								</div>
 							</div>
-							<div class="form__additionally-item">
-								<label>
-									<input class="form__real-checkbox" type="checkbox" name="water">
-									<span class="form__custome-checkbox"></span>
-									питьевая вода
-								</label>
-							</div>
-							<div class="form__additionally-item">
-								<label>
-									<input class="form__real-checkbox" type="checkbox" name="milk">
-									<span class="form__custome-checkbox"></span>
-									молоко
-								</label>
-							</div>
-							<div class="form__additionally-item">
-								<label>
-									<input class="form__real-checkbox" type="checkbox" name="vitamins">
-									<span class="form__custome-checkbox"></span>
-									витамины
-								</label>
+							<div class="form__button-wrapper">
+								<button class="button form__button" type="submit">отправить заявку</button>
+								<p class="form__button-text">* — Обязательные поля</p>
 							</div>
 						</div>
-						<div class="form__button-wrapper">
-							<button class="button form__button" type="submit">отправить заявку</button>
-							<p class="form__button-text">* — Обязательные поля</p>
-						</div>
-					</div>
 				</form>
 			</section>
 		</main>
